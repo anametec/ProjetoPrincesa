@@ -109,3 +109,8 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+nav a:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}

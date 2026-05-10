@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from 'react'
 import { Link, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -9,16 +8,62 @@ import Quiz from "./pages/Quiz";
 function App() {
   return (
     <div>
-      <nav style={{ display: 'flex', gap: '300px' }}>
-        <Link to="/">Home</Link>
-        <Link to="/discografia">Discografia</Link>
-        <Link to="/quiz">Quiz</Link>
+      <nav
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "60px",
+          padding: "20px",
+          background: "#222",
+          boxShadow: "0 0 15px rgba(0,0,0,0.5)",
+          borderBottom: "2px solid #ffcc00",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            color: "#fff",
+            textDecoration: "none",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            transition: "0.3s",
+          }}
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/discografia"
+          style={{
+            color: "#fff",
+            textDecoration: "none",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            transition: "0.3s",
+          }}
+        >
+          Discografia
+        </Link>
+
+        <Link
+          to="/quiz"
+          style={{
+            color: "#fff",
+            textDecoration: "none",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            transition: "0.3s",
+          }}
+        >
+          Quiz
+        </Link>
       </nav>
-      <hr/>
+
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/discografia" element={<Discografia/>} />
-        <Route path="/quiz" element={<Quiz/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/discografia" element={<Discografia />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </div>
   );

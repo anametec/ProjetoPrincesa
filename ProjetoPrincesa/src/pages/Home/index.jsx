@@ -1,13 +1,19 @@
 import { useState } from "react";
+import videoSrc from '../video/video.mp4';
+import './index.css';
 
 function Home() {
   return (
-    <div>
-      <h1>Teste seu conhecimento sobre Charlie Brown Jr e descubra seus principais albuns!</h1>
- 
-  <source src="https://youtu.be/jp288zfsNTI?si=EbDXi0iOPRyGcbBc" type="video/mp4" />
+    <div className="home-container">
+      <h1 className="home-title">
+        Teste seu conhecimento sobre Charlie Brown Jr e descubra seus principais albuns!
+      </h1>
 
-      <p></p>
+      <video className="home-video" controls src={videoSrc}></video>
+
+      <p className="home-text">
+        Responda as perguntas e veja o quanto você conhece a história da banda.
+      </p>
     </div>
   );
 }

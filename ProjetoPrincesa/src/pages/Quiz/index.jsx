@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './index.css';
 
-// Dados das questões (fora do componente para não recriar a cada render)
 const questoes = [
   { pergunta: "De qual desses albuns de Charlie Brown JR é a música: Dona do meu Pensamento ?", opcoes: ["Imunidade Musical", "Bocas Ordinarias", "Camisa 10 Joga Bola Até na Chuva", "Tamo Ai na Atividade"], resposta: "Camisa 10 Joga Bola Até na Chuva" },
   {
@@ -62,7 +61,6 @@ export default function Quiz() {
       setFeedback(`Resposta incorreta! ❌ (A correta era: ${questaoAtual.resposta})`);
     }
 
-    // Espera 1 segundo para mostrar a próxima pergunta, permitindo ver o feedback
     setTimeout(() => {
       const proximoIndice = indiceQuestaoAtual + 1;
       if (proximoIndice < questoes.length) {

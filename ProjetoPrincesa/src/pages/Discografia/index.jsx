@@ -6,8 +6,6 @@ function MusicAPIComponent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Exemplo buscando álbuns do Red Hot Chili Peppers no iTunes
-  // O parâmetro 'term' é a busca e 'entity=album' filtra o tipo de resultado
   const searchTerm = encodeURIComponent('charlie brown jr');
   const uri = `https://itunes.apple.com/search?term=${searchTerm}&entity=album&limit=15`;
 
@@ -25,7 +23,6 @@ function MusicAPIComponent() {
         
         const result = await response.json();
 
-        // A estrutura do iTunes retorna um objeto com 'results' (array)
         if (result.results) {
           setData(result.results);
         } else {
